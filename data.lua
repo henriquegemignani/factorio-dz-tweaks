@@ -77,3 +77,17 @@ if_recipe_exists(
         })
     end
 )
+
+-- Ensure Maraxsis makes the vessel for all sciences
+---@param name string
+local function ensure_pressurized(name)
+    if data.raw["tool"][name] then
+        local inputs = data.raw["lab"]["biolab"].inputs
+        if not table_find(inputs, name) then
+            table.insert(inputs, name)
+        end
+    end
+end
+ensure_pressurized "insulation-science-pack"
+ensure_pressurized "thermodynamic-science-pack"
+ensure_pressurized "aerospace-science-pack"
