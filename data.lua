@@ -91,3 +91,4 @@ end
 ensure_pressurized "insulation-science-pack"
 ensure_pressurized "thermodynamic-science-pack"
 ensure_pressurized "aerospace-science-pack"
+ensure_pressurized "battlefield-science-pack"
