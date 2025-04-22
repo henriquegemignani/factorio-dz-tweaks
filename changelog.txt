@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 2025-04-22
+  Features:
+    - fix Castra science pack not having research vessels
+  Bugfixes:
+    - actually do the things mentioned in previous release
+  Changes:
+    - fixing dea dia science not being pressurized
+---------------------------------------------------------------------------------------------------
 Version: 1.0.0
 Date: 2025-04-22
   Features:
