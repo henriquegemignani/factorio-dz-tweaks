@@ -1,3 +1,5 @@
+local asteroid_util = require("__space-age__.prototypes.planet.asteroid-spawn-definitions")
+
 local function table_find(t, n)
     for _, v in pairs(t) do
         if v == n then
@@ -92,3 +94,19 @@ ensure_pressurized "insulation-science-pack"
 ensure_pressurized "thermodynamic-science-pack"
 ensure_pressurized "aerospace-science-pack"
 ensure_pressurized "battlefield-science-pack"
+
+-- Add a route from castra to corrundum
+if data.raw["planet"]["castra"] and data.raw["planet"]["corrundum"] then
+    data:extend {
+        {
+            type = "space-connection",
+            name = "castra-corrundum",
+            subgroup = "planet-connections",
+            from = "castra",
+            to = "corrundum",
+            order = "f1",
+            length = 20000,
+            asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.vulcanus_gleba)
+        },
+    }
+end

@@ -9,7 +9,8 @@
   "dependencies": [
     "base",
     "? dea-dia-system",
-    "? castra"
+    "? castra",
+    "? corrundum"
   ],
   "quality_required": false,
   "rail_bridges_required": false,
