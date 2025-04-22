@@ -1,10 +1,10 @@
 {
-  "name": "[internal-mod-name]",
+  "name": "factorio-dz-tweaks",
   "version": "0.0.0",
-  "title": "[MOD DISPLAY NAME]",
-  "author": "[YOUR MODS.FACTORIO.COM USERNAME]",
-  "homepage": "[HOMEPAGE/REPO URL]",
-  "description": "[SHORT DESCRIPTION]",
+  "title": "Darkszero's Tweaks",
+  "author": "darkszero",
+  "homepage": "https://github.com/henriquegemignani/factorio-dz-tweaks",
+  "description": "Personal tweaks to random Factorio mods",
   "factorio_version": "2.0",
   "dependencies": [
     "base"
