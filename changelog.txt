@@ -1,0 +1,7 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2025-04-22
+  Features:
+    - Add some tweaks for Dea Dia recipes
+  Changes:
+    - Repository setup
