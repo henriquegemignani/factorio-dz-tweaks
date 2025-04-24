@@ -112,11 +112,22 @@ if data.raw["planet"]["castra"] and data.raw["planet"]["corrundum"] then
 end
 
 
-if data.raw["technology"]["asteroid-productivity"] and data.raw["recipe"]["auric-asteroid-crushing"] then
-    table.insert(data.raw["technology"]["asteroid-productivity"].effects, {
-        type = "change-recipe-productivity",
-        recipe = "auric-asteroid-crushing",
-        change = 0.1,
-        hidden = false
-    })
+if data.raw["technology"]["asteroid-productivity"] then
+    if data.raw["recipe"]["auric-asteroid-crushing"] then
+        table.insert(data.raw["technology"]["asteroid-productivity"].effects, {
+            type = "change-recipe-productivity",
+            recipe = "auric-asteroid-crushing",
+            change = 0.1,
+            hidden = false
+        })
+    end
+
+    if data.raw["recipe"]["promethium-gravel"] then
+        table.insert(data.raw["technology"]["asteroid-productivity"].effects, {
+            type = "change-recipe-productivity",
+            recipe = "promethium-gravel",
+            change = 0.1,
+            hidden = false
+        })
+    end
 end
