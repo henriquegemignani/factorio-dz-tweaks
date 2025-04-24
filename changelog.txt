@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.3.0
+Date: 2025-04-24
+  Features:
+    - Add asteroid productivity for auric asteroids
+    - asteroid productivity for prometheum gravel
+---------------------------------------------------------------------------------------------------
 Version: 1.2.0
 Date: 2025-04-22
   Features:
