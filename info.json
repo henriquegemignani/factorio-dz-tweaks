@@ -10,7 +10,8 @@
     "base",
     "? dea-dia-system",
     "? castra",
-    "? corrundum"
+    "? corrundum",
+    "? secretas"
   ],
   "quality_required": false,
   "rail_bridges_required": false,
