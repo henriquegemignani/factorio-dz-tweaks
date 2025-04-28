@@ -62,6 +62,7 @@ if_recipe_exists("aerospace-science-pack", allow_prod)
 if_recipe_exists("atmospheric-thruster", allow_prod)
 if_recipe_exists("rhenium-alloy-plate", allow_prod)
 if_recipe_exists("navicomputer", allow_prod)
+if_recipe_exists("atmospheric-fuel", allow_prod)
 
 -- Fixes for Thermodynamic Science
 if_recipe_exists(
