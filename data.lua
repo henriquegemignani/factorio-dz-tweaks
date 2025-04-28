@@ -71,6 +71,7 @@ if_recipe_exists("atmospheric-thruster", allow_prod)
 if_recipe_exists("rhenium-alloy-plate", allow_prod)
 if_recipe_exists("navicomputer", allow_prod)
 if_recipe_exists("atmospheric-fuel", allow_prod)
+if_recipe_exists("battery-from-lithium", allow_prod)
 
 -- Fix default import for certain items
 default_import_fix(data.raw["tool"]["insulation-science-pack"], "prosephina")
