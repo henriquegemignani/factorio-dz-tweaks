@@ -18,6 +18,14 @@ local function if_recipe_exists(name, call)
     end
 end
 
+---@param item data.ItemPrototype?
+---@param location data.SpaceLocationID
+local function default_import_fix(item, location)
+    if item then
+        item.default_import_location = location
+    end
+end
+
 ---@param proto data.RecipePrototype
 local function allow_prod(proto)
     proto.allow_productivity = true
@@ -63,6 +71,11 @@ if_recipe_exists("atmospheric-thruster", allow_prod)
 if_recipe_exists("rhenium-alloy-plate", allow_prod)
 if_recipe_exists("navicomputer", allow_prod)
 if_recipe_exists("atmospheric-fuel", allow_prod)
+
+-- Fix default import for certain items
+default_import_fix(data.raw["tool"]["insulation-science-pack"], "prosephina")
+default_import_fix(data.raw["tool"]["thermodynamic-science-pack"], "lemures")
+default_import_fix(data.raw["tool"]["aerospace-science-pack"], "planet-dea-dia")
 
 -- Fixes for Thermodynamic Science
 if_recipe_exists(
@@ -114,7 +127,6 @@ if data.raw["planet"]["castra"] and data.raw["planet"]["corrundum"] then
         },
     }
 end
-
 
 if data.raw["technology"]["asteroid-productivity"] then
     if data.raw["recipe"]["auric-asteroid-crushing"] then
