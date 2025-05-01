@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.5.0
+Date: 2025-05-01
+  Features:
+    - Add missing locale strings for Dea Dia
+    - Add productivity to Atmospheric Fuel
+    - Allow prod for Battery from Lithium
+    - allow productivity for making Navigation Computer
+    - Fix default import location for Dea Dia sciences
+---------------------------------------------------------------------------------------------------
 Version: 1.4.0
 Date: 2025-04-27
   Features:
