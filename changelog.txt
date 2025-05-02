@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.7.0
+Date: 2025-05-02
+  Features:
+    - Make superheated iron/copper melting accept productivity and not produce free lubricant
+---------------------------------------------------------------------------------------------------
 Version: 1.6.0
 Date: 2025-05-02
   Features:
