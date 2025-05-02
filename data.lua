@@ -65,6 +65,20 @@ if_recipe_exists(
     end
 )
 
+-- Make the superheated iron/copper melting accept prod and not produce lubricant
+for _, name in pairs {"superheated-molten-iron", "superheated-molten-copper"} do
+    if_recipe_exists(
+        name,
+        ---@param proto data.RecipePrototype
+        function(proto)
+            proto.allow_productivity = true
+            ignore_productivity_fix(proto, {
+                ["lubricant"] = 200,
+            })
+        end
+    ) 
+end
+
 if_recipe_exists("insulation-science-pack", allow_prod)
 if_recipe_exists("aerospace-science-pack", allow_prod)
 if_recipe_exists("atmospheric-thruster", allow_prod)
@@ -97,6 +111,8 @@ if_recipe_exists(
         })
     end
 )
+
+-- Fixes
 
 -- Ensure Maraxsis makes the vessel for all sciences
 ---@param name string
