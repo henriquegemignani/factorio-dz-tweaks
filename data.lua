@@ -148,3 +148,12 @@ if data.raw["technology"]["asteroid-productivity"] then
         })
     end
 end
+
+-- Make bioflux recycle into itself
+if_recipe_exists(
+    "bioflux-from-gel",
+    ---@param proto data.RecipePrototype
+    function(proto)
+        proto.auto_recycle = false
+    end
+)
