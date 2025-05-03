@@ -79,6 +79,18 @@ for _, name in pairs {"superheated-molten-iron", "superheated-molten-copper"} do
     ) 
 end
 
+if_recipe_exists(
+    "hardened-steel",
+    ---@param proto data.RecipePrototype
+    function(proto)
+        proto.allow_productivity = true
+        ignore_productivity_fix(proto, {
+            ["hot-lubricant"] = 200,
+        })
+    end
+) 
+
+-- Allow prod in a bunch of recipes
 if_recipe_exists("insulation-science-pack", allow_prod)
 if_recipe_exists("aerospace-science-pack", allow_prod)
 if_recipe_exists("atmospheric-thruster", allow_prod)
