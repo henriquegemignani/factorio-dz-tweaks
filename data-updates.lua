@@ -10,3 +10,11 @@ if data.raw["tool"]["battlefield-science-pack"] then
         end
     end
 end
+
+if data.raw["assembling-machine"]["atan-atom-forge"] then
+    local fluid_boxes = data.raw["assembling-machine"]["atan-atom-forge"].fluid_boxes
+    if fluid_boxes then
+        fluid_boxes[1].pipe_connections[1].position = { 0.25, -2.66 }
+        fluid_boxes[2].pipe_connections[1].position = { 0.25, 2.66 }
+    end
+end
