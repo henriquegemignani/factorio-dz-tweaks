@@ -32,6 +32,11 @@ local function allow_prod(proto)
 end
 
 ---@param proto data.RecipePrototype
+local function remove_auto_recycle(proto)
+    proto.auto_recycle = false
+end
+
+---@param proto data.RecipePrototype
 ---@param mapping table<string, int>
 local function ignore_productivity_fix(proto, mapping)
     for _, result in pairs(proto.results) do
@@ -177,11 +182,6 @@ if data.raw["technology"]["asteroid-productivity"] then
     end
 end
 
--- Make bioflux recycle into itself
-if_recipe_exists(
-    "bioflux-from-gel",
-    ---@param proto data.RecipePrototype
-    function(proto)
-        proto.auto_recycle = false
-    end
-)
+-- Clear auto_recycle from certain recipes
+if_recipe_exists("bioflux-from-gel", remove_auto_recycle)
+if_recipe_exists("planetaris-compression-rocket-fuel", remove_auto_recycle)
