@@ -16,7 +16,9 @@
     "? planetaris-unbounded",
     "? planet-muluna",
     "? pelagos",
-    "? wooden_platform"
+    "? wooden_platform",
+    "? maraxsis",
+    "? Moshine"
   ],
   "quality_required": false,
   "rail_bridges_required": false,

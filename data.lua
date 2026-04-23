@@ -193,3 +193,17 @@ if mods["wooden_platform"] and mods["pelagos"] then
         { type = "item", name = "coconut-husk", amount = 10 },
     }
 end
+
+
+if mods["planetaris-arig"] and data.raw["planet"]["moshine"] and data.raw["planet"]["maraxsis"] then
+    data:extend {{
+        type = "space-connection",
+        name = "moshine-maraxsis",
+        subgroup = "planet-connections",
+        from = "moshine",
+        to = "maraxsis",
+        order = "f",
+        length = 20000,
+        asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.gleba_aquilo)
+    }}
+end
