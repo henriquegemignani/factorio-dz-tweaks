@@ -185,3 +185,11 @@ end
 -- Clear auto_recycle from certain recipes
 if_recipe_exists("bioflux-from-gel", remove_auto_recycle)
 if_recipe_exists("planetaris-compression-rocket-fuel", remove_auto_recycle)
+
+if mods["wooden_platform"] and mods["pelagos"] then
+    data.raw["recipe"]["wooden-platform"].ingredients = {
+        { type = "item", name = "wood", amount = 15 },
+        { type = "item", name = "coconut-sealant", amount = 5 },
+        { type = "item", name = "coconut-husk", amount = 10 },
+    }
+end

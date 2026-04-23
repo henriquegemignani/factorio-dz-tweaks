@@ -15,7 +15,8 @@
     "? fall-of-promethea",
     "? planetaris-unbounded",
     "? planet-muluna",
-    "? pelagos"
+    "? pelagos",
+    "? wooden_platform"
   ],
   "quality_required": false,
   "rail_bridges_required": false,
