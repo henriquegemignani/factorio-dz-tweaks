@@ -186,6 +186,7 @@ end
 if_recipe_exists("bioflux-from-gel", remove_auto_recycle)
 if_recipe_exists("planetaris-compression-rocket-fuel", remove_auto_recycle)
 
+-- Make Wooden Platform only use pelagos recipe, for upcycling reasons
 if mods["wooden_platform"] and mods["pelagos"] then
     data.raw["recipe"]["wooden-platform"].ingredients = {
         { type = "item", name = "wood", amount = 15 },
@@ -194,7 +195,7 @@ if mods["wooden_platform"] and mods["pelagos"] then
     }
 end
 
-
+-- Add a route from Moshine to Maraxsis, since Arig removes the other routes
 if mods["planetaris-arig"] and data.raw["planet"]["moshine"] and data.raw["planet"]["maraxsis"] then
     data:extend {{
         type = "space-connection",
@@ -206,4 +207,14 @@ if mods["planetaris-arig"] and data.raw["planet"]["moshine"] and data.raw["plane
         length = 20000,
         asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.gleba_aquilo)
     }}
+end
+
+-- Lock all tech that uses gold science behind the gold science pack
+for _, tech in pairs(data.raw["technology"]) do
+    if tech.prerequisites and tech.prerequisites[1] == "planet-discovery-secretas" and tech.name ~= "steam-recycler" then
+        tech.prerequisites = {"golden-science-pack"}
+    end
+end
+if data.raw["technology"]["golden-science-pack"] then
+    data.raw["technology"]["golden-science-pack"].prerequisites = {"steam-recycler"}
 end
