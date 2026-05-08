@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.11.0
+Date: 2026-05-08
+  Features:
+    - Adjust recipes for Frozeta
+    - fixes Nullius <-> Renai chest issue
+    - When Pelagos is present, make Wood Platform be exclusively from it
+  Bugfixes:
+    - Now starts properly with Space Age disabled
+---------------------------------------------------------------------------------------------------
 Version: 1.10.0
 Date: 2025-11-07
   Features:
