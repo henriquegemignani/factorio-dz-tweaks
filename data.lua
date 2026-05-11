@@ -1,6 +1,6 @@
 local asteroid_util
 if mods["space-age"] then
-    asteroid_util = require("__space-age__.prototypes.planet.asteroid-util")
+    asteroid_util = require("__space-age__.prototypes.planet.asteroid-spawn-definitions")
 end
 
 local function table_find(t, n)
