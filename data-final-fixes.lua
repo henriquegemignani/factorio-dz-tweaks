@@ -7,9 +7,8 @@ if entity then
 end
 
 if mods["nullius"] then
-    data.raw["recipe"]["wooden-chest"].localised_name = {"entity-name.nullius-small-chest-1"}
-    data.raw["recipe"]["wooden-chest"].ingredients = {
-      {type = "item", name = "nullius-iron-sheet", amount = 2},
-      {type = "item", name = "nullius-iron-rod", amount = 1}
-    }
+    if data.raw["recipe"]["nullius-closed-chest"] then
+        data.raw["recipe"]["nullius-closed-chest"].allow_as_intermediate = false
+        data.raw["recipe"]["nullius-closed-chest"].allow_intermediates = false
+    end
 end
