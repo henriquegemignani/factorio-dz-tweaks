@@ -11,4 +11,8 @@ if mods["nullius"] then
         data.raw["recipe"]["nullius-closed-chest"].allow_as_intermediate = false
         data.raw["recipe"]["nullius-closed-chest"].allow_intermediates = false
     end
+    table.insert(data.raw["technology"]["nullius-construction-robot-1"].effects, {
+        type = "create-ghost-on-entity-death",
+        modifier = true
+    })
 end
