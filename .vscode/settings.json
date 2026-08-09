@@ -27,8 +27,7 @@
     "factorio.versions": [
         {
             "name": "2.0",
-            "factorioPath": "f:\\Factorio_2.0.20\\bin\\x64\\factorio.exe",
-            "active": true
+            "factorioPath": "f:\\Factorio_2.0.20\\bin\\x64\\factorio.exe"
         }
     ],
     "Lua.workspace.userThirdParty": [
