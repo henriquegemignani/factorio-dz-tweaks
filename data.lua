@@ -221,3 +221,42 @@ end
 if data.raw["technology"]["golden-science-pack"] then
     data.raw["technology"]["golden-science-pack"].prerequisites = {"steam-recycler"}
 end
+
+-- Merge vesta's heavy-water with metal&stars
+if data.raw["fluid"]["heavy-water"] and data.raw["fluid"]["ske_heavy_water"] then
+    data.raw["recipe"]["heavy-water"] = data.raw["recipe"]["ske_heavy_water"]
+    data.raw["recipe"]["heavy-water"].name = "heavy-water"
+    data.raw["recipe"]["ske_heavy_water"] = nil
+    data.raw["fluid"]["ske_heavy_water"] = nil
+
+    for _, tech in pairs(data.raw["technology"]) do
+        if tech.effects then
+            for _, effect in pairs(tech.effects) do
+                if effect.type == "unlock-recipe" and effect.recipe == "ske_heavy_water" then
+                    effect.recipe = "heavy-water"
+                end
+            end
+        end
+        if tech.research_trigger then
+            if tech.research_trigger.type == "craft-fluid" and tech.research_trigger.fluid == "ske_heavy_water" then
+                tech.research_trigger.fluid = "heavy-water"
+            end
+        end
+    end
+    for _, recipe in pairs(data.raw["recipe"]) do
+        if recipe.ingredients then
+            for _, ingredient in pairs(recipe.ingredients) do
+                if ingredient.name == "ske_heavy_water" then
+                    ingredient.name = "heavy-water"
+                end
+            end
+        end
+        if recipe.results then
+            for _, result in pairs(recipe.results) do
+                if result.name == "ske_heavy_water" then
+                    result.name = "heavy-water"
+                end
+            end
+        end
+    end
+end
